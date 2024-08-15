@@ -1,0 +1,19 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Contact {% endblock %}
+
+{% block 'styles' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+<form>
+    <table>
+        {{ form.as_table }}
+    </table>
+    <div class="btn-wrapper">
+        <input type="submit" value="Send to" class="btn-send"/>
+    </div>
+</form>
+{% endblock %}

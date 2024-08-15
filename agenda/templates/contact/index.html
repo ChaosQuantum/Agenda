@@ -12,8 +12,8 @@
     {% for contact in contacts %}
     <li>{{ contact }}
         <span>
-            <a href="#" class="btn btn-detail">See</a>
-            <a href="#" class="btn btn-edit">Edit</a>
+            <a href="{% url 'contact_view' id=contact.id %}" class="btn btn-detail">See</a>
+            <a href="{% url 'contact_edit' id=contact.id %}" class="btn btn-edit">Edit</a>
             <a href="#" class="btn btn-delete">Delete</a>
         </span>
     </li>
