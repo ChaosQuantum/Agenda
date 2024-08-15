@@ -1,0 +1,17 @@
+:root{
+    --color-primary: #2ea3f2;
+    --color-text:#666;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
