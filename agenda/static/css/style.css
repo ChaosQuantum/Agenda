@@ -1,3 +1,5 @@
+/* Layout settings*/
+
 :root{
     --color-primary: #2ea3f2;
     --color-text:#666;
@@ -150,3 +152,31 @@ main{
     background-color: rgb(14, 159, 53);
     color: white;
 }
+
+/*End layout settings */
+
+/* Index settings */
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card:hover{
+    background-color: var(--color-text);
+}
+
+/* End index settings */ 

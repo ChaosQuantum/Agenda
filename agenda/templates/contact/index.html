@@ -3,10 +3,11 @@
 {% block 'title' %}Contacts{% endblock %}
 
 {% block 'content' %}
-<form class="search" action="{% url 'contact' %}" method="GET">
-    <input type="text" name="search" class="search-bar" placeholder="Contact us...">
-    <input type="submit" value="Search" class="btn btn-search">
-</form>
+<h1>Contact</h1>
+
+{% include 'contact/partials/search.html' %}
+{% include 'contact/partials/by_initial.html' %}
+
 <span class="aux-btns"><a href="{% url 'contact' %}">See all</a> <a href="{% url 'contact_create' %}">Add</a></span>
 <ul class="list">
     {% for contact in contacts %}
@@ -14,7 +15,7 @@
         <span>
             <a href="{% url 'contact_view' id=contact.id %}" class="btn btn-detail">See</a>
             <a href="{% url 'contact_edit' id=contact.id %}" class="btn btn-edit">Edit</a>
-            <a href="#" class="btn btn-delete">Delete</a>
+            <a href="{% url 'contact_delete' id=contact.id %}" class="btn btn-delete">Delete</a>
         </span>
     </li>
     {% endfor %}

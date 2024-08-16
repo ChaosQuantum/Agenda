@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
 
-{% block 'title' %} Create To do {% endblock %}
+{% block 'title' %} Edit To do {% endblock %}
 
 {% block 'styles' %}
 {% load static %}
@@ -8,9 +8,15 @@
 {% endblock %}
 
 {% block 'content' %}
-
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <il{% if message.tags %} class="alert-success" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 <span class="aux-btns-form"><a href="{% url 'to_do' %}">Go back</a></span>
-<form action="{% url 'todo_create' %}" method="POST">
+<form action="{% url 'todo_edit' id=id %}" method="POST">
     {% csrf_token %}
     <table>
         {{ form.as_table }}
