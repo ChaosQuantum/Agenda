@@ -7,7 +7,7 @@
     <input type="text" name="search" class="search-bar" placeholder="Contact us...">
     <input type="submit" value="Search" class="btn btn-search">
 </form>
-<span class="aux-btns"><a href="{% url 'contact' %}">See all</a> <a href="#">Add</a></span>
+<span class="aux-btns"><a href="{% url 'contact' %}">See all</a> <a href="{% url 'contact_create' %}">Add</a></span>
 <ul class="list">
     {% for contact in contacts %}
     <li>{{ contact }}
